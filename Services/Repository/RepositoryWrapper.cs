@@ -1,4 +1,5 @@
 ﻿using Biblioteca.Context;
+using Biblioteca.Models;
 using Biblioteca.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,12 @@ namespace Biblioteca.Services.Repository
 
         private IAdminRepository _admin;
 
+        private IRegistredUserRepository _registredUser;
+
+        private IRegistredUserSubRepository _registredUserSub;
+
+        private IBookRepository _book;
+
         public IAdminRepository Admin
         {
             get
@@ -23,6 +30,42 @@ namespace Biblioteca.Services.Repository
                 }
 
                 return _admin;
+            }
+        }
+        public IRegistredUserRepository RegistredUser
+        {
+            get
+            {
+                if (_registredUser == null)
+                {
+                    _registredUser = new RegistredUserRepository(repoContext);
+                }
+
+                return _registredUser;
+            }
+        }
+        public IRegistredUserSubRepository RegistredUserSub
+        {
+            get
+            {
+                if (_registredUserSub == null)
+                {
+                    _registredUserSub = new RegistredUserSubRepository(repoContext);
+                }
+
+                return _registredUserSub;
+            }
+        }
+        public IBookRepository Book
+        {
+            get
+            {
+                if (_book == null)
+                {
+                    _book = new BookRepository(repoContext);
+                }
+
+                return _book;
             }
         }
     }
