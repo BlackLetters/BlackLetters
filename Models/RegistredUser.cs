@@ -7,10 +7,10 @@ namespace Biblioteca.Models
 {
     public class RegistredUser
     {
-        public int RegistredUserID { get; set; }
-        public string RegistredUserFirstName { get; set; }
-        public string RegistredUserLastName { get; set; }
-        public string RegistredUserEmail { get; set; }
-        public string RegistredUserPassword { get; set; }
+        public int ID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }
