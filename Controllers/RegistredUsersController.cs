@@ -61,7 +61,7 @@ namespace Biblioteca.Controllers
         {
             if (ModelState.IsValid)
             {
-                repo.Admin.Create(RegistredUser);
+                repo.RegistredUser.Create(registredUser);
                 repo.Save();
                 return RedirectToAction(nameof(Index));
             }
@@ -100,7 +100,7 @@ namespace Biblioteca.Controllers
             {
                 try
                 {
-                    repo.RegistredUser.Update(RegistredUser);
+                    repo.RegistredUser.Update(registredUser);
                     repo.Save();
                 }
                 catch (DbUpdateConcurrencyException)
