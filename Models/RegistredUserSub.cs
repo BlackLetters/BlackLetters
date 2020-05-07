@@ -7,7 +7,7 @@ namespace Biblioteca.Models
 {
     public class RegistredUserSub
     {
-        public int RegistredUserSubID { get; set; }
+        public int ID { get; set; }
         public RegistredUser RegistredUsers { get; set; }
     }
 }

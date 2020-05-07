@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.Services.Interfaces
 {
-    interface IRepositoryBase<T>
+    public interface IRepositoryBase<T> : IRepositoryWrapper
     {
         List<T> FindAll();
         T FindByCondition(Expression<Func<T, bool>> expression);

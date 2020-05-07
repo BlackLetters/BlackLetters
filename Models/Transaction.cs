@@ -7,9 +7,9 @@ namespace Biblioteca.Models
 {
     public class Transaction
     {
-        public int TransactionID { get; set; }
-        public int TransactionDateOfReturn { get; set; }
-        public int TransactionDateOfAquire { get; set; }
+        public int ID { get; set; }
+        public int DateOfReturn { get; set; }
+        public int DateOfAquire { get; set; }
 
         public ICollection<Book> Books { get; set; }
         public ICollection<RegistredUser> RegistredUsers { get; set; }

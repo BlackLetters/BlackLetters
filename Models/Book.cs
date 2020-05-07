@@ -7,11 +7,11 @@ namespace Biblioteca.Models
 {
     public class Book
     {
-        public int BookID { get; set; }
-        public string BookTitle { get; set; }
-        public string BookPrice { get; set; }
-        public string BookStatus { get; set; }
-        public string BookType { get; set; }
-        public string BookAuthor { get; set; }
+        public int ID { get; set; }
+        public string Title { get; set; }
+        public string Price { get; set; }
+        public string Status { get; set; }
+        public string Type { get; set; }
+        public string Author { get; set; }
     }
 }

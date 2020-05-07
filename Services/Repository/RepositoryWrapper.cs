@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.Services.Repository
 {
-    public class RepositoryWrapper
+    public class RepositoryWrapper: IRepositoryWrapper
     {
         private BibliotecaContext repoContext;
 
@@ -67,6 +67,11 @@ namespace Biblioteca.Services.Repository
 
                 return _book;
             }
+        }
+
+        public void Save()
+        {
+            throw new NotImplementedException();
         }
     }
 }

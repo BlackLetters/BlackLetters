@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Biblioteca.Services.Interfaces
 {
-    interface IRegistredUserSubRepository: IRepositoryBase <RegistredUserSub>
+    public interface IRegistredUserSubRepository: IRepositoryBase <RegistredUserSub>
     {
         public bool Exists (int ID);
     }

@@ -79,7 +79,7 @@ namespace Biblioteca.Controllers
             }
 
             // var registredUserSub = await _context.RegistredUserSubs.FindAsync(id);
-            var admin = repo.RegistredUserSub.FindByCondition(t => t.ID == id);
+            var registredUserSub = repo.RegistredUserSub.FindByCondition(t => t.ID == id);
             if (registredUserSub == null)
             {
                 return NotFound();
@@ -134,7 +134,7 @@ namespace Biblioteca.Controllers
 
             // var registredUserSub = await _context.RegistredUserSubs
             //     .FirstOrDefaultAsync(m => m.ID == id);
-            var admin = repo.RegistredUserSub.FindByCondition(t => t.ID == id);
+            var registredUserSub = repo.RegistredUserSub.FindByCondition(t => t.ID == id);
             if (registredUserSub == null)
             {
                 return NotFound();
@@ -152,7 +152,7 @@ namespace Biblioteca.Controllers
             // _context.RegistredUserSubs.Remove(registredUserSub);
             // await _context.SaveChangesAsync();
             var registredusersub = repo.RegistredUserSub.FindByCondition(t => t.ID == id);
-            repo.Admin.Delete(registredusersub);
+            repo.RegistredUserSub.Delete(registredusersub);
             repo.Save();
             return RedirectToAction(nameof(Index));
         }

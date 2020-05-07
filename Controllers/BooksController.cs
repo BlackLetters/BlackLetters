@@ -16,7 +16,7 @@ namespace Biblioteca.Controllers
         private readonly BibliotecaContext _context;
         private IRepositoryWrapper repo;
 
-        public BooksController((IRepositoryWrapper repo))
+        public BooksController(IRepositoryWrapper repo)
         {
             repo = repo;
         }

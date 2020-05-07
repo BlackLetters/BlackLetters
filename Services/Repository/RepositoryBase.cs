@@ -12,6 +12,13 @@ namespace Biblioteca.Services.Repository
     {
         protected BibliotecaContext RepositoryContext { get; set; }
 
+        public IAdminRepository Admin => throw new NotImplementedException();
+
+        public IBookRepository Book => throw new NotImplementedException();
+
+        public IRegistredUserRepository RegistredUser => throw new NotImplementedException();
+
+        public IRegistredUserSubRepository RegistredUserSub => throw new NotImplementedException();
 
         public RepositoryBase(BibliotecaContext RepositoryContext)
         {
@@ -41,6 +48,11 @@ namespace Biblioteca.Services.Repository
         public void Update(T entity)
         {
             this.RepositoryContext.Set<T>().Update(entity);
+        }
+
+        public void Save()
+        {
+            throw new NotImplementedException();
         }
     }
 }

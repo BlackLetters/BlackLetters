@@ -8,6 +8,9 @@ namespace Biblioteca.Services.Interfaces
     public interface IRepositoryWrapper
     {
         public IAdminRepository Admin { get; }
+        public IBookRepository Book { get; }
+        public IRegistredUserRepository RegistredUser { get; }
+        public IRegistredUserSubRepository RegistredUserSub { get; }
 
         public void Save();
     }
